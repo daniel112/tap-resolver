@@ -9,7 +9,11 @@
     "clean": "rimraf yarn.lock; rimraf package.lock; rimraf node_modules ",
     "test": "NODE_ENV=resolver-test jest",
     "test:reports": "yarn test --coverage && yarn view:reports",
-    "view:reports": "open reports/coverage/lcov-report/index.html"
+    "view:reports": "open reports/coverage/lcov-report/index.html",
+    "format:eslint": "eslint . --fix --quiet",
+    "format:prettier": "prettier --ignore-path .eslintignore --write '**/*.{js,jsx}'",
+    "format": "yarn format:prettier && yarn format:eslint",
+    "eslint:watch": "onchange '**/*.{js,jsx}' -- eslint {{changed}} --fix"
   },
   "publishConfig": { 
     "registry": "https://npm.pkg.github.com/" 
