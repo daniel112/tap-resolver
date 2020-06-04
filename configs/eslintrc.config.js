@@ -19,9 +19,8 @@ module.exports = {
     browser: true,
     node: true,
     'jest/globals': true,
-    'react-native/react-native': true,
   },
-  plugins: [ 'jest', 'react', 'react-native' ],
+  plugins: [ 'jest', 'react' ],
   extends: [ 'plugin:jest/recommended', 'plugin:react/recommended' ],
   settings: {
     react: {
@@ -89,10 +88,6 @@ module.exports = {
     'jest/no-identical-title': 'error',
     'jest/prefer-to-have-length': 'warn',
     'jest/valid-expect': 'error',
-    /* React-Native */
-    'react-native/no-raw-text': 1,
-    'react-native/no-unused-styles': 2,
-    'react-native/split-platform-components': 2,
     /* React */
     'react/jsx-curly-spacing': [
       2,
